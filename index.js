@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => { //waits for page to load
   (function() {
     'use strict';
 
-    //constants
     //buttons
     const stopButton = document.getElementById('stopButton')
     const slowButton = document.getElementById('slowButton')
@@ -18,15 +17,27 @@ document.addEventListener('DOMContentLoaded', () => { //waits for page to load
     stopButton.addEventListener('click', () => {
       stopLight.classList.toggle('stop')
     })
+    //mouse enter button
+    stopButton.addEventListener('mouseover', () => {
+      console.log(`Entered stopButton button`);
+    })
 
     //yellow
     slowButton.addEventListener('click', () => {
       slowLight.classList.toggle('slow')
     })
+    //mouse enter button
+    slowButton.addEventListener('mouseover', () => {
+      console.log(`Entered slowButton button`);
+    })
 
     //green
     goButton.addEventListener('click', () => {
       goLight.classList.toggle('go')
+    })
+    //mouse enter button
+    goButton.addEventListener('mouseover', () => {
+      console.log(`Entered goButton button`);
     })
 
   })()
